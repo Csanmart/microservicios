@@ -1,4 +1,8 @@
 products-service/node_modules
 products-service/.env
+products-service/package-lock.json
+products-service/package.json
 
 users-service/node_modules
+users-service/package-lock.json
+users-service/package.json
