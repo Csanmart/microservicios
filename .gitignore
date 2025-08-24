@@ -1,0 +1,4 @@
+products-service/node_modules
+products-service/.env
+
+users-service/node_modules
