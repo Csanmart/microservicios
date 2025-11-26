@@ -26,6 +26,6 @@ class Producto extends BaseUrl{
 };
 
 
-export const productoService = new Producto('http://localhost:3001/productos');
+export const productoService = new Producto('http://localhost:3000/productos');
 
 

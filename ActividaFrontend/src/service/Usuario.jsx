@@ -8,21 +8,21 @@ class Usuario extends BaseUrl{
     }
 
     async crearUsuario(data){
-        return this.post('/', data);
+        return this.post('/crear', data);
     }
 
     async mostrarPorId(id){
-        return this.get(`/${id}`);
+        return this.get(`/tomar/${id}`);
     }
 
     async actualizarUsuario(id, data){
-        return this.put(`/${id}`, data);
+        return this.put(`/actualizar/${id}`, data);
     }
 
 
     async eliminarUsuarios(id){
-        return this.delete(`/${id}`);
+        return this.delete(`/eliminar/${id}`);
     }
 }
 
-export const usuarioService = new Usuario('http://localhost:3002/usuarios');
+export const usuarioService = new Usuario('http://localhost:3000/usuarios');

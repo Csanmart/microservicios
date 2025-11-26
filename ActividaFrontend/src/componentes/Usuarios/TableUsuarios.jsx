@@ -10,15 +10,16 @@ export default function TableUsuarios() {
 
 
     useEffect(()=>{
-        const mostrarUsuarios = async()=>{
+        const seeUsers = async()=>{
             try {
                 let data = await usuarioService.mostrarUsuarios();
-                setUsuarios(data)
+                console.log('Datos de la api', data)
+                setUsuarios(Array.isArray(data) ? data : data.data || data.usuarios || [])
             } catch (error) {
                 setError('Error llamando los usuarios...');
             }
         }
-        mostrarUsuarios();
+        seeUsers();
     }, [])
 
     

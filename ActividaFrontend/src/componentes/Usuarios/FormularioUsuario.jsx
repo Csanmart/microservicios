@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 export default function FormularioUsuario(){
     const [usuarios, setUsuario] = useState({
         nombre: '',
-        correo: '',
+        email: '',
         telefono: ''
     });
     const [error, setError] = useState(null);
@@ -18,7 +18,7 @@ export default function FormularioUsuario(){
     const handleSubmit = async(e)=>{
         e.preventDefault();
 
-        if(!usuarios.nombre || !usuarios.correo || !usuarios.telefono){
+        if(!usuarios.nombre || !usuarios.email || !usuarios.telefono){
             Swal.fire({
                 icon: 'warning',
                 title:'Los campos estan vacios',
@@ -62,8 +62,8 @@ export default function FormularioUsuario(){
                     <label className="form-label">Ingrese el correo</label>
                     <input type="text"
                         className="form-control"
-                        name="correo"
-                        value={usuarios.correo}
+                        name="email"
+                        value={usuarios.email}
                         onChange={handleChange}
                     />
                 </div>
